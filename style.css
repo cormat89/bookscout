@@ -1,0 +1,141 @@
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  cursor: pointer;
+  width: 25px;
+  color: #555;
+  font-size: 25px;
+}
+
+button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #777;
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+/**********************************************************************/
+
+body {
+  background-image: url("img/library_bg-cropped.jpg");
+  background-size: 80%;
+  background-position: center;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.search-box {
+  width: 600px; /* Mantiene sempre la stessa larghezza */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.search-box:focus-within {
+  transform: scale(1.02);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+input {
+  flex: 1;
+  height: 50px;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+input:focus {
+  border-bottom: 2px solid #007bff;
+}
+
+.result-box {
+  max-height: 250px;
+  overflow-y: auto;
+  border-top: 1px solid #ddd;
+}
+
+.result-box ul {
+  padding: 15px 10px;
+}
+
+.result-box ul li {
+  list-style: none;
+  border-radius: 5px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  font-size: 16px;
+  color: #333;
+}
+
+.result-box ul li:hover {
+  background-color: #e9f3ff;
+}
+
+/* Scrollbar personalizzata per dispositivi con scrollbar visibile */
+.result-box::-webkit-scrollbar {
+  width: 8px;
+}
+
+.result-box::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 4px;
+}
+
+.result-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* RESPONSIVE DESIGN PER MOBILE: Manteniamo le dimensioni uguali */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  .search-box {
+    width: 600px; /* Fissa la larghezza anche su mobile */
+  }
+
+  .row {
+    padding: 10px 20px;
+  }
+
+  input {
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .result-box {
+    max-height: 250px;
+  }
+
+  .result-box ul li {
+    font-size: 16px;
+    padding: 12px;
+  }
+}
